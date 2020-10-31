@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectOutfitActivity"></activity>
+        <activity android:name=".FitPreviewActivity"></activity>
+        <activity android:name=".SelectOutfitActivity" />
         <activity android:name=".AddOutfitActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

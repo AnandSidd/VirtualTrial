@@ -105,6 +105,8 @@ public class AddOutfitActivity extends AppCompatActivity
                         boolean result = database.insertOutfit(category, bmp);
                         if(result) {
                             Toast.makeText(getApplicationContext(), "outfit has added into wardrobe", Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(AddOutfitActivity.this, SelectOutfitActivity.class);
+                            startActivity(i);
                         }
                         else
                         {Toast.makeText(getApplicationContext(), "outfit can not be added !!", Toast.LENGTH_SHORT).show();}
