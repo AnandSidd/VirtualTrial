@@ -4,12 +4,22 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import com.coderfolk.multilamp.customView.MultiLamp;
+import com.coderfolk.multilamp.model.Target;
+import com.coderfolk.multilamp.shapes.Circle;
+import com.coderfolk.multilamp.shapes.Rectangle;
 
 import org.opencv.android.OpenCVLoader;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -57,5 +67,10 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });//end btn_add_outfit onClick
+        MultiLamp multiLamp = new MultiLamp(MainActivity.this);
+        ArrayList<Target> targets = new ArrayList<>();
+        targets.add(new Target(btn_add_outfit, "Tap here to add image of outfit", MultiLamp.TOP, new Rectangle()));
+        targets.add(new Target(btn_fit_outfit, "Tap here to try the desired outfit from the list of added outfit", MultiLamp.BOTTOM, new Rectangle()));
+        multiLamp.build(targets);
     }//End onCreate
 }//End activity

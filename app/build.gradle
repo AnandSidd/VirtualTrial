@@ -52,4 +52,5 @@ dependencies {
     implementation project(':OpenCV')
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.ujwalthote:MultiLamp:2.0'
 }
