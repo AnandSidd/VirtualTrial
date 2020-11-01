@@ -1,5 +1,6 @@
 package com.example.virtualtrial;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -21,7 +23,7 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>
 {
 
-    private Context mContext;
+    Context mContext;
     private List<Outfit> outfitList;
     static int selectedOutfitID;
 
@@ -44,7 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }//end onCreateViewHolder
 
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, final int i)
+    public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, @SuppressLint("RecyclerView") final int i)
     {
         String category = outfitList.get(i).getCategory();
         String description = "";
@@ -69,7 +71,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 String item_category = outfitList.get(i).getCategory();
                 byte[] item_image = outfitList.get(i).getImage();
 
-//                DrawView.currentOutfit = new Outfit(item_id, item_category, item_image);
+                DrawView.currentOutfit = new Outfit(item_id, item_category, item_image);
                 Intent intent = new Intent(mContext, FitPreviewActivity.class);
                 mContext.startActivity(intent);
             }
@@ -115,7 +117,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         {
             final int CONTEXT_OPTION_DELETE = 1;
 
-            menu.setHeaderTitle("Choose ..");
+//            menu.setHeaderTitle("Choose ..");
             MenuItem menuDeleteItem = menu.add(this.getAdapterPosition(), CONTEXT_OPTION_DELETE, 0, "Delete");
 
             menuDeleteItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
@@ -125,7 +127,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     DatabaseManager databaseManager = new DatabaseManager(itemView.getContext());
                     databaseManager.deleteOutfitById(selectedOutfitID);
                     databaseManager.close();
-
                     return true;
                 }
             });//end menuDeleteItem.setOnMenuItemClickListener

@@ -80,6 +80,10 @@
         android:layout_marginTop="580dp"
         android:visibility="gone"
         app:srcCompat="@android:drawable/ic_menu_edit" />
+    <include
+        android:id="@+id/llProgressBar"
+        android:visibility="gone"
+        layout="@layout/activity_progress"/>
 
 
 </RelativeLayout>
