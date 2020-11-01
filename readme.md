@@ -19,7 +19,7 @@ It allows users to see how an outfit will look on them by using image processing
 
 ## How does it work ?
 ### Add Outfit
-TRY-IT allows users to add their own outfit from gallery.<br/>
+VirtualTrial allows users to add their own outfit from gallery.<br/>
 ### Share directly from apps and try the outfit
 You can share outfit from flipkart, Amazon and Myntra and get the image of the shared product and try it virtually.
 
