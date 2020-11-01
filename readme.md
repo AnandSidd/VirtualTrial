@@ -7,9 +7,22 @@ VirtualTrial is a virtual dressing room application for >= Android 6.0.
 
 It allows users to see how an outfit will look on them by using image processing and a body pose estimation model.
 
+## Screenshots
+
+<br>  <img src="https://github.com/AnandSidd/VirtualTrial/blob/master/Screenshot_20201101-141019.jpg" height=300 width=150>
+ <img src="https://github.com/AnandSidd/VirtualTrial/blob/master/Screenshot_20201101-141348.jpg" height=300 width=150>
+<img src="https://github.com/AnandSidd/VirtualTrial/blob/master/Screenshot_20201101-141401.jpg" height=300 width=150>
+<img src="https://github.com/AnandSidd/VirtualTrial/blob/master/Screenshot_20201101-141408.jpg" height=300 width=150>
+<img src="https://github.com/AnandSidd/VirtualTrial/blob/master/Screenshot_20201101-141416.jpg" height=300 width=150>
+<img src="https://github.com/AnandSidd/VirtualTrial/blob/master/Screenshot_20201101-141509.jpg" height=300 width=150>
+</br>
+
 ## How does it work ?
 ### Add Outfit
 TRY-IT allows users to add their own outfit from gallery.<br/>
+### Share directly from apps and try the outfit
+You can share outfit from flipkart, Amazon and Myntra and get the image of the shared product and try it virtually.
+
 The selected outfit is processed according to a sensitivity rate given by the user.<br/>
 User selects a category to store outfit.<br/>
 The outfit stored in database.<br/><br/>
@@ -52,6 +65,8 @@ According to its category, the outfit size and position are calculated by using;
 
 
 <br/><br/>
+
+The share function works currently on a localhost server. So this runs when connected to my machine only.
 ## Future Development
   ### Functional
   * Users will be allowed to create outfit combinations
