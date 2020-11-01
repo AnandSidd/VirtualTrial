@@ -3,7 +3,7 @@
 
 
 ## Description
-TRY-IT is a virtual dressing room application for >= Android 6.0.
+VirtualTrial is a virtual dressing room application for >= Android 6.0.
 
 It allows users to see how an outfit will look on them by using image processing and a body pose estimation model.
 
