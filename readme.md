@@ -1,5 +1,5 @@
-# TRY-IT Mobile Application
-![DUP-logo](https://github.com/AnandSidd/DUP-master/blob/master/app/src/main/ic_launcher-playstore.png?raw=true)
+# VirtualTrial Mobile Application
+
 
 
 ## Description
@@ -24,7 +24,7 @@ Image processing methods to extract outfit given below;
   * Crop largest contour
 
 ### Fit Outfit on Camera Preview
-TRY-IT uses a tensorflow-lite model to estimate certain points on user's body during camera preview.<br/> 
+VirtualTrial uses a tensorflow-lite model to estimate certain points on user's body during camera preview.<br/> 
 By using these estimated points, the outfit is placed on screen by calculating its size and position.<br/><br/>
 
 
